@@ -42,6 +42,10 @@ def main():
 			# skip things that aren't files (i.e. folders)
 			continue
 
+		if not os.access(absfile, os.X_OK):
+			# skip things not executable
+			continue
+
 		if testmode:
 			print("would run: " + absfile)
 		else:
