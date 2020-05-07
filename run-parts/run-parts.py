@@ -34,12 +34,12 @@ def main():
 	for file in filesarr:
 		absfile = os.path.join(folder,file)
 
-		if not os.path.isfile(absfile):
-			# skip things that aren't files (i.e. folders)
-			continue
-
 		if file in excludedfiles:
 			# skip things in excluded file list
+			continue
+
+		if not os.path.isfile(absfile):
+			# skip things that aren't files (i.e. folders)
 			continue
 
 		if testmode:
