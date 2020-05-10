@@ -30,4 +30,4 @@ Unlike run-parts from Linux, this script will run all files that are exectuable 
 Pull requests are welcome.
 
 ## License
-[Unlicense](https://unlicense.org>)
+[Unlicense](https://unlicense.org)
