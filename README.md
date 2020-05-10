@@ -1,6 +1,6 @@
 # Utilities
 
-This is a project containing utilities and scripts I've created.
+This is a collection of utilities and scripts I've created.
 
 # run-parts
 
