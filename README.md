@@ -18,13 +18,13 @@ So, I use this run-parts.py utility on my MacBook and iMac to run my backup scri
 run-parts [--test] folder
 ```
 
-### Flags
+## Flags
 
 * --test: will print out what files would be executed instead of running them.
 
-### Caveats
+## Caveats
 
-Unlike run-parts from Linux runs all the files that are exectuable in the folder will run.
+Unlike run-parts from Linux, this script will run all files that are exectuable in the folder. That is, it doesn't have the restrictions on naming of files (e.g. run-parts from Linux doesn't support a period (.) in the filename, for instance, but, I wanted my scripts to have file extensions, such as .sh; so run-parts.py doesn't constrain the filenames).
 
 ## Contributing
 Pull requests are welcome.
