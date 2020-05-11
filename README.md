@@ -31,7 +31,8 @@ Pull requests are welcome.
 
 This project is public domain (using the Unlicense [see license below](#license)).
 
-For anyone contributing to this, your contribution will also be public domain. If you are not comfortable with that and want something changed, please create an issue and I will try to fix it myself.
+For anyone contributing to this, your contribution will also be public domain. If you are not comfortable with your code being public domain, please create an issue. I will fix the issue and it will be public domain.
 
 ## License
 [Unlicense](https://unlicense.org)
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
