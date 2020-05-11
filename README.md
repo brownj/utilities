@@ -5,6 +5,8 @@ This is a collection of utilities and scripts I've created.
 * [run-parts](#run-parts)
 * [encrypt-folder](#encrypt-folder)
 
+<br>
+
 # run-parts
 
 This is a python script that works similarly to [`run-parts`](http://manpages.ubuntu.com/manpages/trusty/man8/run-parts.8.html) from Linux. Given a directory, `run-parts` will execute the files in that directory.
@@ -30,8 +32,7 @@ run-parts.py [--test] folder
 
 Unlike `run-parts` from Linux, `run-parts.py` will run all files that are exectuable in the folder. That is, `run-parts.py` doesn't have the restrictions on naming of files. For example, `run-parts` from Linux doesn't support a period (.) in the filename. However, I wanted my scripts to have file extensions, such as .sh; so `run-parts.py` doesn't constrain the filenames.
 
-&NewLine;
-&NewLine;
+<br>
 
 # encrypt-folder
 
@@ -61,6 +62,8 @@ encrypt-folder.py "~/GPG Backups/Documents" ~/Desktop
 ## Caveats
 
 The default GPG key is my key, josh@brownj.org. So, you'll want to use something different for you. :)
+
+<br>
 
 # Contributing
 Pull requests are welcome.
