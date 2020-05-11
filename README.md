@@ -30,6 +30,8 @@ run-parts.py [--test] folder
 
 Unlike `run-parts` from Linux, `run-parts.py` will run all files that are exectuable in the folder. That is, `run-parts.py` doesn't have the restrictions on naming of files. For example, `run-parts` from Linux doesn't support a period (.) in the filename. However, I wanted my scripts to have file extensions, such as .sh; so `run-parts.py` doesn't constrain the filenames.
 
+
+
 # encrypt-folder
 
 This script will take a folder, compress it, and encrypt it with GPG.
