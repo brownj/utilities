@@ -29,9 +29,9 @@ Unlike `run-parts` from Linux, `run-parts.py` will run all files that are exectu
 ## Contributing
 Pull requests are welcome.
 
-This project is public domain (using the Unlicense [see license below][1]).
+This project is public domain (using the Unlicense [see license below](#license)).
 
 For anyone contributing to this, your contribution will also be public domain. If you are not comfortable with that and want something changed, please create an issue and I will try to fix it myself.
 
 ## License
-[1]: [Unlicense](https://unlicense.org)
+[Unlicense](https://unlicense.org)
