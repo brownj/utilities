@@ -15,8 +15,9 @@ I use `run-parts.py` on my MacBook and iMac to run my backup scripts regularly v
 ## Usage
 
 ```bash
-run-parts [--test] folder
+run-parts.py [--test] folder
 ```
+(I symlink run-parts.py to my \~/bin folder [`ln -s ~/Utilities/run-parts/run-parts.py ~/bin/run-parts`] so that I can use `run-parts` rather than typing `run-parts.py`).
 
 ## Flags
 
