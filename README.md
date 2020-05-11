@@ -32,11 +32,11 @@ Unlike `run-parts` from Linux, `run-parts.py` will run all files that are exectu
 
 # encrypt-folder
 
-This is a python script that works similarly to [`run-parts`](http://manpages.ubuntu.com/manpages/trusty/man8/run-parts.8.html) from Linux. Given a directory, `run-parts` will execute the files in that directory.
+This script will take a folder, compress it, and encrypt it with GPG.
 
 ## Why?
 
-I make 
+In addition to using [BorgBackup](https://www.borgbackup.org), I make backups of folders regularly (so that I have my files backed up in more than one format). I use this script to back up and encrypt the folders for storage.
 
 ## Usage
 
@@ -62,7 +62,7 @@ The default GPG key is my key, josh@brownj.org. So, you'll want to use something
 # Contributing
 Pull requests are welcome.
 
-This project is public domain (using the Unlicense [see license below](#license)).
+This project and utilities are public domain (using the Unlicense [see license below](#license)).
 
 For anyone contributing to this, your contribution will also be public domain. If you are not comfortable with your code being public domain, please create an issue. I will fix the issue and it will be public domain.
 
