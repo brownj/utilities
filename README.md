@@ -5,6 +5,7 @@ This is a collection of utilities and scripts I've created.
 * [run-parts](#run-parts)
 * [encrypt-folder](#encrypt-folder)
 * [find-wifi-network](#find-wifi-network)
+* [get_password_from_keyring](#get_password_from_keyring)
 
 <br>
 
@@ -88,6 +89,17 @@ else
 	echo "not connected to home network"
 	exit 1
 fi
+```
+<br>
+
+# get_password_from_keyring
+
+Gets a password from the macOS Keychain for a given account name. I use it in my backup script to get the secure password from the macOS Keychain for my backups.
+
+## Usage
+
+```python
+	accountPassword = get_password_from_keyring("AccountName")
 ```
 
 <br>
