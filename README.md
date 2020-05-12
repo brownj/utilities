@@ -11,7 +11,7 @@ This is a collection of utilities and scripts I've created.
 
 # run-parts
 
-This is a python script that works similarly to [`run-parts`](http://manpages.ubuntu.com/manpages/trusty/man8/run-parts.8.html) from Linux. Given a directory, `run-parts` will execute the files in that directory.
+This is a python script that works similarly to [ `run-parts` ](http://manpages.ubuntu.com/manpages/trusty/man8/run-parts.8.html) from Linux. Given a directory, `run-parts` will execute the files in that directory.
 
 ## Why?
 
@@ -21,10 +21,11 @@ I use `run-parts.py` on my MacBook and iMac to run my backup scripts regularly v
 
 ## Usage
 
-```bash
+``` bash
 run-parts.py [--test] folder
 ```
-(I symlink `run-parts.py` to my `\~/bin` folder [`ln -s ~/Utilities/run-parts/run-parts.py ~/bin/run-parts`] so that I can use `run-parts` rather than typing `run-parts.py`).
+
+(I symlink `run-parts.py` to my `\~/bin` folder [ `ln -s ~/Utilities/run-parts/run-parts.py ~/bin/run-parts` ] so that I can use `run-parts` rather than typing `run-parts.py` ).
 
 ## Flags
 
@@ -46,14 +47,17 @@ In addition to using [BorgBackup](https://www.borgbackup.org), I make backups of
 
 ## Usage
 
-```bash
+``` bash
 encrypt-folder.py filename-to-create folder-to-encrypt [gpg-key-id]
 ```
+
 ### Example
-```bash
+
+``` bash
 encrypt-folder.py "~/GPG Backups/Documents" ~/Desktop
 ```
-(I symlink `encrypt-folder.py` to my `\~/bin` folder [`ln -s ~/Utilities/encrypt-folder/encrypt-folder.py ~/bin/encrypt-folder`] so that I can use `encrypt-folder` rather than typing `encrypt-folder.py`).
+
+(I symlink `encrypt-folder.py` to my `\~/bin` folder [ `ln -s ~/Utilities/encrypt-folder/encrypt-folder.py ~/bin/encrypt-folder` ] so that I can use `encrypt-folder` rather than typing `encrypt-folder.py` ).
 
 ## Arguments
 
@@ -77,19 +81,20 @@ I want my backups to only run when I'm connected to my home network. So, I have 
 
 ## Usage
 
-```bash
+``` bash
 export WIFIACCESSPOINT=$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}')
 
 if [ $WIFIACCESSPOINT -a "<home Wi-Fi access point name>" ] 
 then
-    echo "connected to home network"
-    # run script here
-    exit 0
+	echo "connected to home network"
+	# run script here
+	exit 0
 else
 	echo "not connected to home network"
 	exit 1
 fi
 ```
+
 <br>
 
 # get_password_from_keyring
@@ -98,13 +103,14 @@ Gets a password from the macOS Keychain for a given account name. I use it in my
 
 ## Usage
 
-```python
-	accountPassword = get_password_from_keyring("AccountName")
+``` python
+accountPassword = get_password_from_keyring("AccountName")
 ```
 
 <br>
 
 # Contributing
+
 Pull requests are welcome.
 
 This project and utilities are public domain (using the Unlicense [see license below](#license)).
@@ -112,4 +118,5 @@ This project and utilities are public domain (using the Unlicense [see license b
 For anyone contributing to this, your contribution will also be public domain. If you are not comfortable with your code being public domain, please create an issue. I will fix the issue and it will be public domain.
 
 ## License
+
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](https://unlicense.org/)
