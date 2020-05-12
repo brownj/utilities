@@ -4,6 +4,7 @@ This is a collection of utilities and scripts I've created.
 
 * [run-parts](#run-parts)
 * [encrypt-folder](#encrypt-folder)
+* [find-wifi-network](#find-wifi-network)
 
 <br>
 
@@ -62,6 +63,32 @@ encrypt-folder.py "~/GPG Backups/Documents" ~/Desktop
 ## Caveats
 
 The default GPG key is my key, josh@brownj.org. So, you'll want to use something different for you. :)
+
+<br>
+
+# find-wifi-network
+
+This is a shell script that is an example for how to find the current Wi-Fi access point a Mac is connected to.
+
+## Why?
+
+I want my backups to only run when I'm connected to my home network. So, I have my backup scripts only execute when I'm connected to my home Wi-Fi network.
+
+## Usage
+
+```bash
+export WIFIACCESSPOINT=$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}')
+
+if [ $WIFIACCESSPOINT -a "<home Wi-Fi access point name>" ] 
+then
+    echo "connected to home network"
+    # run script here
+    exit 0
+else
+	echo "not connected to home network"
+	exit 1
+fi
+```
 
 <br>
 
