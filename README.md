@@ -84,15 +84,13 @@ I want my backups to only run when I'm connected to my home network. So, I have 
 ``` bash
 export WIFIACCESSPOINT=$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}')
 
-if [ $WIFIACCESSPOINT -a "<home Wi-Fi access point name>" ] 
+if [ $WIFIACCESSPOINT != "<home Wi-Fi access point name>" ] 
 then
-	echo "connected to home network"
-	# run script here
-	exit 0
-else
-	echo "not connected to home network"
+	echo "not connected to home network, exiting"
 	exit 1
 fi
+
+#rest of script runs here
 ```
 
 <br>
