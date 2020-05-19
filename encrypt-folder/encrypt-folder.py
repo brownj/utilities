@@ -38,6 +38,7 @@ def main():
 	subprocess.call([
 		'/usr/local/bin/gpg',
 		'--encrypt',
+		'--sign',
 		'--recipient', gpgkey,
 		bz2filename
 		])
