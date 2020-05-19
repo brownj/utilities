@@ -37,9 +37,8 @@ def main():
 
 	subprocess.call([
 		'/usr/local/MacGPG2/bin/gpg',
-		'-e',
-		'-r',
-		gpgkey,
+		'--encrypt',
+		'--recipient', gpgkey,
 		bz2filename
 		])
 
