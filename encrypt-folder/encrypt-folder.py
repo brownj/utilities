@@ -36,7 +36,7 @@ def main():
 	print("encrypting tarball")
 
 	subprocess.call([
-		'/usr/local/MacGPG2/bin/gpg',
+		'/usr/local/bin/gpg',
 		'--encrypt',
 		'--recipient', gpgkey,
 		bz2filename
