@@ -30,6 +30,7 @@ def main():
 		sys.exit(3)
 
 	filesarr = os.listdir(folder)
+	filesarr = sorted(filesarr)
 	
 	for file in filesarr:
 		absfile = os.path.join(folder,file)
