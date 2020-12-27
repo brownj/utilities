@@ -11,16 +11,16 @@ def main():
 	import sys, os, subprocess
 
 	if (len(sys.argv) < 2):
-		print("Usage: run-parts.py [--test] folder")
+		print("Usage: run-parts.py [-n/--dry-run/--test] folder")
 		sys.exit(1)
 
 	folder = os.path.abspath(sys.argv[1])
 	testmode = False
 	excludedfiles = excludedfilenames()
 
-	if (sys.argv[1] == "--test"):
+	if (sys.argv[1] == "-n" or sys.argv[1] == "--dry-run" or sys.argv[1] == "--test"):
 		if (len(sys.argv) != 3):
-			print("Usage: run-parts.py [--test] folder")
+			print("Usage: run-parts.py [-n/--dry-run/--test] folder")
 			sys.exit(2)
 		testmode = True
 		folder = os.path.abspath(sys.argv[2])
