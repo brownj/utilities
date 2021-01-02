@@ -25,9 +25,10 @@ def main():
 
 	print("making tarball of " + folder + ". . .")
 
+	# h- dereference which means follow symlink
 	subprocess.call([
 		'/usr/bin/tar',
-		'cfj',
+		'cfjh',
 		bz2filename,
 		folder
 		])
