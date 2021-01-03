@@ -25,11 +25,39 @@ I use `run-parts.py` on my MacBook and iMac to run my backup scripts regularly v
 run-parts.py [--test] folder
 ```
 
-(I symlink `run-parts.py` to my `\~/bin` folder [ `ln -s ~/Utilities/run-parts/run-parts.py ~/bin/run-parts` ] so that I can use `run-parts` rather than typing `run-parts.py` ).
+(I symlink `run-parts.py` to my `~/bin` folder [ `ln -s ~/Utilities/run-parts/run-parts.py ~/bin/run-parts` ] so that I can use `run-parts` rather than typing `run-parts.py` ).
 
 ## Flags
 
-* **--test**: will print out what files would be executed instead of running them.
+* **-n/--dry-run/--test**: will print out what files would be executed instead of running them.
+
+## Ways `run-parts` Will Skip Files
+
+If you don't want all files in a folder to be executed, there are a few ways to make it skip executing the files.
+
+### File is in the Excluded Files List
+
+Near the top of `run-parts.py`, there is a function that returns an array of "ignored files". Currently, this is hard-coded to just .DS_Store since macOS will automatically generate that file. You could modify this to include other files you don't want included.
+
+### Files that Aren't Files (Directories, etc.)
+
+`run-parts` will automatically exclude directories. It should also skip things such as UNIX pipes but I haven't actually tried it on them.
+
+### Files that Aren't Marked as Executable
+
+Files must have the eXectuable flag (chmod +x filename) in order for `run-parts` to execute them. Without the flag, the files will be skipped.
+
+### Specially Named Files (\_disabled)
+
+Files containing '\_disabled' in the name will be skipped. e.g. "100-backup_disabled.sh".
+
+### Files with Special Line (#disabled)
+
+If the second line of a file contains the text #disabled, the file will be skipped. e.g.
+```#bin/sh
+#disabled
+[rest of script here. e.g. rsync -Pav ~/data remote:data]
+```
 
 ## Caveats
 
