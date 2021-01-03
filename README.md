@@ -21,8 +21,8 @@ I use `run-parts.py` on my MacBook and iMac to run my backup scripts regularly v
 
 ## Usage
 
-``` bash
-run-parts.py [--test] folder
+```bash
+run-parts.py [-n/--dry-run/--test] folder
 ```
 
 (I symlink `run-parts.py` to my `~/bin` folder [ `ln -s ~/Utilities/run-parts/run-parts.py ~/bin/run-parts` ] so that I can use `run-parts` rather than typing `run-parts.py` ).
@@ -31,7 +31,7 @@ run-parts.py [--test] folder
 
 * **-n/--dry-run/--test**: will print out what files would be executed instead of running them.
 
-## Ways `run-parts` Will Skip Files
+## Ways to Skip Files from Executing
 
 If you don't want all files in a folder to be executed, there are a few ways to make it skip executing the files.
 
@@ -54,9 +54,13 @@ Files containing '\_disabled' in the name will be skipped. e.g. "100-backup_disa
 ### Files with Special Line (#disabled)
 
 If the second line of a file contains the text #disabled, the file will be skipped. e.g.
-```#bin/sh
+```bash
+#bin/sh
 #disabled
-[rest of script here. e.g. rsync -Pav ~/data remote:data]
+...
+...[rest of script here. e.g. rsync -Pav ~/data remote:data]
+...
+exit 0
 ```
 
 ## Caveats
