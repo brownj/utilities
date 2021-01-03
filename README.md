@@ -17,13 +17,15 @@ This is a python script that works similarly to [ `run-parts` ](http://manpages.
 
 I am familiar with `run-parts` from my Ubuntu servers and wanted something similar for my Mac to run my backups (I use [BorgBackup](https://www.borgbackup.org) for my backups).
 
-I use `run-parts.py` on my MacBook and iMac to run my backup scripts regularly via [LaunchAgents](https://www.launchd.info). For instance, I have my own "cron.daily" folder that contains scripts that I want to run daily, such as running the borg backup and syncing files between the MacBook and iMac.
+I use `run-parts.py` on my MacBook and iMac to run my backup scripts regularly via [LaunchAgents](https://www.launchd.info). For instance, I have my own "cron.daily" folder that contains scripts that I want to run daily, such as running the borg backup.
 
 ## Usage
 
 ```bash
 run-parts.py [-n/--dry-run/--test] folder
 ```
+
+Files are executed in alphabetical order. So, if you want to have the files executed in order, name them as such. e.g. 001-first.sh, 010-second.sh, ..., 999-last.sh.
 
 (I symlink `run-parts.py` to my `~/bin` folder [ `ln -s ~/Utilities/run-parts/run-parts.py ~/bin/run-parts` ] so that I can use `run-parts` rather than typing `run-parts.py` ).
 
