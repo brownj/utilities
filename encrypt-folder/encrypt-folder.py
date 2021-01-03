@@ -14,22 +14,24 @@ def main():
 	if (len(sys.argv) == 4):
 		gpgkey = sys.argv[3]
 
-	if not filename.endswith('.tar.bz2'):
-			filename = filename + '.tar.bz2'
+	if not filename.endswith('.tar.xz'):
+			filename = filename + '.tar.xz'
 
 	if not os.path.exists(folder):
 		print("path doesn't exist")
 		exit
 
-	bz2filename = filename #folder.rstrip('/') + '.tar.bz2'
-
 	print("making tarball of " + folder + ". . .")
 
-	# h- dereference which means follow symlink
+	# tar args
+	#    a- (--auto-compress) auto-detect compression format based on filename.
+	#    c- (--create) create mode
+	#    h- (--deference, also -L) follow symlinks to save files instead of symlinks
+	#    f- (--file) write to file instead of stdout
 	subprocess.call([
 		'/usr/bin/tar',
-		'cfjh',
-		bz2filename,
+		'acfh',
+		filename,
 		folder
 		])
 
@@ -41,13 +43,10 @@ def main():
 		'--encrypt',
 		'--sign',
 		'--recipient', gpgkey,
-		bz2filename
+		filename
 		])
 
-	subprocess.call([
-		'/bin/rm',
-		bz2filename
-		])
+	subprocess.call([ '/bin/rm', filename ])
 
 	print("encryption finished.")
 
