@@ -143,12 +143,11 @@ accountPassword = get_password_from_keyring("AccountName")
 
 # Contributing
 
-Pull requests are welcome.
+This project is in the public domain. Copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
+ public domain dedication. See the LICENSE file in this directory.
 
-This project and utilities are public domain (using the Unlicense [see license below](#license)).
-
-For anyone contributing to this, your contribution will also be public domain. If you are not comfortable with your code being public domain, please create an issue. I will fix the issue and it will be public domain.
+All contributions to this project must be released under the same CC0 wavier. By submitting a pull request or patch, you are agreeing to comply with this waiver of copyright interest.
 
 ## License
 
-[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](https://unlicense.org/)
+[![License: CC0 1.0 Universal](http://i.creativecommons.org/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
