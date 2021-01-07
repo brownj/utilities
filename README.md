@@ -11,7 +11,7 @@ This is a collection of utilities and scripts I've created.
 
 # run-parts
 
-This is a python script that works similarly to [ `run-parts` ](http://manpages.ubuntu.com/manpages/trusty/man8/run-parts.8.html) from Linux. Given a directory, `run-parts` will execute the files in that directory.
+This is a python script that works similarly to [`run-parts`](http://manpages.ubuntu.com/manpages/trusty/man8/run-parts.8.html) from Linux. Given a directory, `run-parts` will execute the files in that directory.
 
 ## Why?
 
