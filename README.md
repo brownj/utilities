@@ -143,8 +143,7 @@ accountPassword = get_password_from_keyring("AccountName")
 
 # Contributing
 
-This project is in the public domain. Copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
- public domain dedication. See the LICENSE file in this directory.
+This project is in the public domain. Copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/). See the LICENSE file in this directory.
 
 All contributions to this project must be released under the same CC0 wavier. By submitting a pull request or patch, you are agreeing to comply with this waiver of copyright interest.
 
