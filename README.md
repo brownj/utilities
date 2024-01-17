@@ -141,10 +141,6 @@ accountPassword = get_password_from_keyring("AccountName")
 
 <br>
 
-# Public Domain
+# License - MIT
 
-This project is in the public domain. Copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/). See the LICENSE file in this directory.
-
-All contributions to this project must be released under the same CC0 wavier. By submitting a pull request or patch, you are agreeing to comply with this waiver of copyright interest.
-
-[![License: CC0 1.0 Universal](http://i.creativecommons.org/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+This project is available under the MIT license. See the LICENSE file for more info.
